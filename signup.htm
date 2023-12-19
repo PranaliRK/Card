@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: pink;
+        }
+        form{
+            height: 300px;
+            width: 250px;
+            background: white;
+            border: 1px solid black;
+            border-radius: 30px;
+            box-shadow: 2px 2px 2px black;
+            text-align: center;
+        }
+        form label{
+            margin: 30px;
+            font-weight: 900;
+        }
+        form input{
+            margin: 10px;
+            border-radius: 10px;
+            height: 30px;
+
+        }
+        button{
+            margin: 30px;
+            background: black;
+            color: red;
+            border-radius: 10px;
+            width: 70px;
+            height: 30px;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <form action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name">
+        <label for="email">Email</label>
+        <input type="email" id="email">
+        <label for="pass">Password</label>
+        <input type="password" id="pass">
+        <button id="signup">signup</a></button>
+
+
+
+    </form>
+
+    <script>
+         let a=document.getElementById('signup')
+        a.addEventListener('click',(e)=>{
+            e.preventDefault()
+                let Name=document.getElementById('name').value
+                let Password=document.getElementById('pass').value
+                let Email=document.getElementById('email').value
+                window.localStorage.setItem('name',Name);
+                window.localStorage.setItem('password',Password);
+                window.localStorage.setItem('email',Email)
+               
+                window.open('./login.htm')
+
+        })
+    </script>
+
+</body>
+</html>
